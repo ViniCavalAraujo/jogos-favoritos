@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --corlink: #3d9193;
+    --corpadrao: #85BDBF;
+    --cordestaque: #10bbc1;
+    --corfundo: #18314F;
+    --corfundo2: #14263b;
+    --corparagrafo: #A2A2A2;
+
+    --paragrafo: "Poppins", 'sans-serif';
+    --titulos: "Orbitron", 'sans-serif';
+}
+
+
+html, body {
+    height: 100%;   
+}
+
+body {
+  background: var(--corfundo2);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* garante que body ocupe toda a tela */
+}
+
+.body-leitura {
+    background-color: var(--corfundo);
+}
+
+header {
+    padding: 20px;
+    background-color: var(--corfundo);
+    background-image: url(../image-header/controle.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.104);
+    position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); /* escurece levemente */
+  pointer-events: none; /* essencial aqui, pois ele ajuda o navegador a ignorar a camada after que estava impedindo de acessar os links do menu */
+}
+
+
+.icon-menu {
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+
+.menu > a {
+    padding: 10px;
+    margin: 5px 0px;
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.9);
+    font-weight: 900;
+    font-family: var(--titulos);
+    margin-right: 5px;
+    transition: color 0.3s ease-in;
+}
+
+.menu > a:hover {
+    color: var(--cordestaque);
+}
+
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+main h1, h2 {
+    text-align: center;
+    color: var(--cordestaque);
+    font-family: var(--titulos);
+    padding: 10px;
+    margin-bottom: 10px;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.347);
+}
+
+main p {
+    padding: 10px;
+    margin: 8px 0px;
+    color: var(--corparagrafo);
+    line-height: 2em;
+    text-align: justify;
+    font-family: var(--paragrafo);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.p-contato-home {
+    text-align: center;
+}
+
+.titulo-curiosidades {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: var(--cordestaque);
+    font-family: var(--titulos);
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.325);
+}
+
+.curiosidades-jogos .firstp {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-curiosidades {
+    padding: 20px;
+}
+
+.card-curiosidades p {
+    line-height: 3em;
+    padding: 10px;
+    text-align: justify;
+}
+
+.links a{
+    text-decoration: none;
+    color: var(--corlink);   
+}
+
+.links a:hover {
+    color: var(--corpadrao);
+    text-decoration: underline;
+}
+
+.aside-curiosidades {
+    max-width: 700px;
+    margin: auto auto 10px auto;
+    background-color: var(--corfundo2);
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.aside-curiosidades p {
+    line-height: 2em;
+}
+
+.list-aside ul{
+    list-style-position: outside;
+    padding-left: 25px;
+}
+
+
+.list-aside li {
+    color: var(--corparagrafo);
+    font-family: var(--paragrafo);
+    padding: 5px;
+}
+
+
+/* marker estiliza especificamente o marcador
+das listas (ul e ol) */
+.list-aside li::marker {
+    color: var(--cordestaque);
+}
+
+.lastp {
+    text-align: center;
+}
+
+
+.contato-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contato ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+}
+
+
+.contato li {
+    display: flex;
+    align-items: center;
+}
+
+.contato a {
+    padding: 10px;
+    font-family: var(--paragrafo);
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.contato a:hover {
+    color: var(--cordestaque);
+    transform: scale(1.05);
+}
+
+
+.email {
+    text-align: center;
+    color: white;
+}
+
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: fill 0.3s ease-out;
+}
+
+.contato a:hover .icon {
+    fill: var(--cordestaque);
+}
+
+
+footer {
+    padding: 1px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: var(--paragrafo);
+    color: var(--cordestaque);
+    background-color: var(--corfundo);
+}
+
+.footer-leitura {
+    background-color: var(--corfundo2);
+}
+
+
+@media (max-width:900px) {
+    .menu {
+        flex-direction: column;
+    }
+    .contato-main {
+        margin-top: -15px;
+    }
+}
+
+@media (max-width:600px) {
+    header {
+        background-image: url(../image-header/controle2.jpg);
+        background-position: center bottom;
+        background-attachment: fixed;
+    }
+    .menu {
+        width: 170px;
+        margin: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .titulo-principal {
+        font-size: 1.7em;
+    }
+    .titulo-curiosidades {
+        line-height: 1.7em;
+    }
+    .icon-menu {
+        display: block;
+    }
+    .menu a {
+        display: none;
+    }
+    .menu:hover a {
+        display: block;
+    }
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:360px) {
+    main h1, h2, h3 {
+        font-size: 1.2em;
+    }
+    main p{
+       font-size: 0.8em;
+    }
+    .email {
+        font-size: 0.8em;
+    }
+    .contato .icon {
+        width: 20px;
+        height: 20px;
+    }
+    .contato a {
+        font-size: 0.9em;
+    }
+}

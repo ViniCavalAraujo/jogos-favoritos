@@ -1,0 +1,110 @@
+/* fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* variáveis cores */
+:root {
+    --corpadrao: #85BDBF;
+    --cordestaque: #10bbc1;
+    --corfundo: #18314F;
+    --corfundo2: #14263b;
+    --corparagrafo: #A2A2A2;
+}
+
+
+main img {
+    border-radius: 10px;
+}
+
+.jogos {
+    max-width: 850px;
+    margin: auto;
+}
+
+.jogos p {
+    text-align: initial;
+    max-width: 400px;
+    margin: auto;
+    font-family: "Poppins", 'sans-serif';
+    font-weight: 600;
+}
+
+
+.titulo {
+    margin-left: 10px;
+    margin-top: 10px;
+    color: var(--corpadrao);
+    font-family: "Orbitron", 'sans-serif';
+    font-weight: 800;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.325);
+}
+
+
+.card-jogo .titulo {
+    transition: text-shadow 0.3s ease;
+}
+
+.card-jogo:hover .titulo {
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.325);
+}
+
+.card-jogo {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid var(--corpadrao);
+    border-radius: 15px;
+    background-color: var(--corfundo);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.card-jogo:hover {
+    transform: translateY(5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* mantém proporção para todas as imagens com tela acima de 640px, acho que nem precisa disso, vou testar editar com essas medidas abaixo as imagens no GIMP amanhã 18/10 */
+
+/*@media (min-width:640px) {
+    main img {
+        width: 270px;
+        height: 150px;
+    }
+}*/
+
+
+
+/* redução para responsividade */
+
+@media (max-width:640px) {
+    .jogos h2 {
+        font-size: 1.3em;
+    }
+
+    .jogos h3 {
+        font-size: 1.1em;
+    }
+    .card-jogo {
+        flex-direction: column;
+    }
+
+    .card-jogo p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width:330px) {
+    .card-jogo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
