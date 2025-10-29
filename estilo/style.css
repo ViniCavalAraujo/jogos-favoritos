@@ -4,7 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+@font-face {
+    font-family: 'gameplayed';
+    src: url(../fonte/gameplayed.otf), format('opentype');
+}
 
 * {
     padding: 0;
@@ -22,6 +25,7 @@
 
     --paragrafo: "Poppins", 'sans-serif';
     --titulos: "Orbitron", 'sans-serif';
+    --menu: 'gameplayed', 'sans-serif';
 }
 
 
@@ -82,7 +86,8 @@ header::after {
     text-decoration: none;
     color:rgba(255, 255, 255, 0.9);
     font-weight: 900;
-    font-family: var(--titulos);
+    font-family: var(--menu);
+    font-size: 1.05em;
     margin-right: 5px;
     transition: color 0.3s ease-in;
 }
